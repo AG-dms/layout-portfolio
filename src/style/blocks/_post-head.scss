@@ -1,0 +1,56 @@
+.post-head {
+  height: 148px;
+  background-color: $pinkDiv;
+  width: 100%;
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__left {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__right {
+    position: relative;
+
+    @media (min-width: 768px) {
+      align-self: center;
+      padding-bottom: 5px;
+    }
+  }
+
+  &__title {
+    color: $pinkText;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  &__filter {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #636363;
+  }
+  &_active {
+    color: $pinkText;
+    font-weight: 600;
+  }
+}

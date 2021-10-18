@@ -1,0 +1,22 @@
+@import "./mixins";
+
+.titles {
+  text-align: center;
+  max-width: 450px;
+  max-width: 450px;
+  margin: 0 auto 48px auto;
+  @include flex-column();
+  flex-direction: column;
+  &__head {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    color: $blackText;
+  }
+  &__text {
+    margin-top: 6px;
+    color: $greyText;
+    font-size: $cardText;
+    color: $greyText;
+  }
+}

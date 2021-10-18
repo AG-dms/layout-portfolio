@@ -1,0 +1,111 @@
+@import './mixins';
+.catalog {
+  padding: 0 8px;
+  grid-template-columns: 1fr;
+  grid-template-rows: (repeat(6, 580px));
+  grid-gap: 15px;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: (repeat(3, 580px));
+  }
+  @media (min-width: 1240px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: (repeat(2, 580px));
+    grid-gap: 30px;
+  }
+
+  &_page {
+    grid-template-rows: (repeat(8, 580px));
+    @media (min-width: 768px) {
+      grid-template-rows: (repeat(4, 580px));
+    }
+    @media (min-width: 1240px) {
+      grid-template-rows: (repeat(3, 580px));
+    }
+  }
+  &_product {
+    grid-template-rows: (repeat(2, 580px));
+    margin-bottom: 64px;
+    @media (min-width: 768px) {
+      grid-template-rows: (repeat(1, 580px));
+    }
+    @media (min-width: 1240px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: (repeat(1, 580px));
+      margin-bottom: 129px;
+    }
+  }
+  &__item {
+    max-width: 360px;
+    background-color: $greyDiv;
+    margin: 0 auto;
+    overflow: hidden;
+    &_hide {
+      display: none;
+      @media (min-width: 1240px) {
+        display: block;
+      }
+    }
+  }
+  &__item:hover &__gardient {
+    opacity: 0.8;
+  }
+  &__item:hover &__btn {
+    opacity: 100;
+  }
+  &__item:hover &__img {
+    transform: scale(1.1);
+  }
+  &__btn {
+    @include flex-column-center();
+    height: 50px;
+    position: absolute;
+    transition: 0.3s;
+    opacity: 0;
+    top: calc(50% - 22.5px);
+    left: calc(50% - 70px);
+    border: 1px solid white;
+    width: 140px;
+    z-index: 100;
+  }
+  &__img-content {
+    max-width: 360px;
+    position: relative;
+    overflow: hidden;
+  }
+  &__gardient {
+    position: absolute;
+    transition: 0.3s;
+    opacity: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $catalogHover;
+    z-index: 10;
+  }
+  &__img {
+    transition: 0.3s;
+    width: 100%;
+    height: 418px;
+    object-fit: cover;
+  }
+  &__text-content {
+    margin-top: 25px;
+    padding: 0 18px;
+  }
+  &__title {
+    font-size: 13px;
+    color: #000;
+  }
+  &__text {
+    margin-top: 13px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 300;
+    color: $darkGreyText;
+  }
+  &__price {
+    font-size: 16px;
+  }
+}

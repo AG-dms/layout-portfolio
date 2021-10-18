@@ -1,0 +1,74 @@
+.registration {
+  padding: 18px 8px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row !important;
+    justify-content: space-evenly;
+  }
+  &__left {
+    display: flex;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 20px;
+    color: $blackText;
+    font-size: 16px;
+  }
+  &__input {
+    padding: 13px 17px;
+    border: 1px solid #a4a4a4;
+    min-width: 304px;
+    max-width: 360px;
+    margin-bottom: 20px;
+  }
+  &__radio {
+    display: flex;
+    margin-bottom: 35px;
+  }
+  &__radio-button:first-child {
+    margin-right: 20px;
+  }
+  &__label {
+    margin-right: 10px;
+  }
+  &__small-text {
+    font-size: 13px;
+    color: #b1b1b1;
+    max-width: 360px;
+  }
+  &__right {
+    @media (min-width: 768px) {
+      max-width: 350px;
+    }
+    @media (min-width: 1140px) {
+      max-width: 600px;
+    }
+  }
+  &_right-title {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  &__list {
+    margin-top: 23px;
+  }
+  &__list-item {
+    font-weight: 300;
+    display: flex;
+  }
+  &__list-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  &__check {
+    margin-right: 23px;
+  }
+}

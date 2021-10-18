@@ -1,0 +1,52 @@
+@import './mixins';
+
+.btn {
+  @include flex-column-center();
+  &_add-to-cart {
+    color: white;
+    display: flex;
+    align-items: center;
+    & > span {
+      margin-top: 2px;
+      margin-left: 10px;
+      display: contents;
+    }
+    & > span::before {
+      content: url(/src/img/icon/cart.svg);
+      margin-right: 10px;
+    }
+  }
+  &__cart-btn {
+    padding: 9px 18px;
+    border: 1px solid $darkGrey;
+  }
+  &__catalog-link {
+    transition: 0.3s;
+    font-size: 16px;
+    color: $darkPinkDiv;
+  }
+  &__sub {
+    background-color: $darkPinkDiv;
+    width: 95px;
+    height: 45px;
+    border-radius: 0 50px 50px 0;
+    float: left;
+    color: white;
+  }
+  &__registration {
+    padding: 16px 30px;
+    transition: 0.3s;
+    font-size: 16px;
+    color: white;
+    background-color: $darkPinkDiv;
+    margin-top: 40px;
+    width: 167px;
+    height: 50px;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+  }
+}
+a:hover > .btn__catalog-link {
+  color: white;
+}

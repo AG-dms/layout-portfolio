@@ -1,0 +1,37 @@
+.catalog-menu {
+  &__title {
+    height: 37px;
+    border-left: 5px solid $darkPinkDiv;
+    border-bottom: 1px solid $greyText;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: $cardText;
+    line-height: 17px;
+    color: $darkGreyText;
+    padding-left: 11px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__title-text {
+  }
+
+  &__title:first-child {
+    margin-top: 16px;
+  }
+
+  &__item {
+    margin-bottom: 24px;
+  }
+
+  &__sub-item {
+    color: $darkGreyText;
+  }
+
+  &__sub-item:not(:last-child) {
+    padding-bottom: 11px;
+  }
+}

@@ -1,0 +1,106 @@
+@import './mixins';
+.filter {
+  height: 25px;
+  background-color: white;
+
+  &_margin {
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+
+  &__container {
+    @include flex-column();
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__left {
+    position: relative;
+  }
+
+  &__catalog {
+    z-index: 1000;
+    min-width: 320px;
+    max-width: 360px;
+    height: 531px;
+    position: absolute;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+    @media (min-width: 375px) {
+      width: 360px;
+    }
+  }
+
+  &__button-text {
+    margin-right: 11px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    display: none;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+    }
+  }
+
+  &_pink-button {
+    margin-left: 16px;
+    padding-top: 13px;
+
+    @media (min-width: 768px) {
+      margin-left: 32px;
+    }
+  }
+
+  &_pink-button-text {
+    color: $pinkText;
+  }
+
+  &__button > img {
+    @media (min-width: 768px) {
+      height: 10px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #6f6e6e;
+    margin-right: 5px;
+
+    @media (min-width: 375px) {
+      margin-right: 9px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__arrow {
+    color: #6f6e6e;
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  &__button:not(:last-child) {
+    margin-right: 10px;
+
+    @media (min-width: 375px) {
+      margin-right: 24px;
+    }
+  }
+}

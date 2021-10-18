@@ -1,0 +1,21 @@
+@import './mixins';
+
+.link-page {
+  transition: 0.3s;
+  width: 212px;
+  height: 48px;
+  border: 1px solid $darkPinkDiv;
+  margin: 40px auto 96px auto;
+  @media (min-width: 768px) {
+    margin: 32px auto 64px auto;
+  }
+  @media (min-width: 1140px) {
+    margin: 48px auto 95px auto;
+  }
+  @include flex-column-center();
+  &:hover {
+    border: none;
+    background-color: $darkPinkDiv;
+    color: white;
+  }
+}

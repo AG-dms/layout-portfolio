@@ -1,0 +1,30 @@
+@mixin flex-column {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin pink-text {
+  color: $pinkText;
+}
+
+@mixin title {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 27px;
+  margin-bottom: 12px;
+}
+
+@mixin miniText {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 27px;
+  margin-bottom: 12px;
+}

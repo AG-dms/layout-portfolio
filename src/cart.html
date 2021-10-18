@@ -1,0 +1,56 @@
+@@include('parts/header.html')
+<div class="post-head">
+  <div class="container post-head__container">
+    <div class="post-head__left">
+      <span class="post-head__title"> SHOPPING CART </span>
+    </div>
+  </div>
+</div>
+
+<div class="basket">
+  <div class="container">
+    <div class="basket__left">
+      <div class="basket__item">
+        <div class="basket__img-item">
+          <img class="basket__img" src="./img/cart1.svg" alt="basket" />
+        </div>
+        <div class="basket__item-text">
+          <span class="basket__title">MANGO PEOPLE &nbsp;T&nbsp;-SHIRT</span>
+          <ul class="basket__parametrs">
+            <li class="basket__list">Price: <span class="pinkText">$300</span></li>
+            <li class="basket__list">Color: Red</li>
+            <li class="basket__list">Size: XL</li>
+            <li class="basket__list">
+              Quantity: <input type="text" value="2" class="basket__quantity" />
+            </li>
+          </ul>
+        </div>
+        <span class="basket__close">&times;</span>
+      </div>
+      <div class="basket__item">
+        <div class="basket__img-item">
+          <img class="basket__img" src="./img/cart2.svg" alt="basket" />
+        </div>
+        <div class="basket__item-text">
+          <span class="basket__title">MANGO PEOPLE &nbsp;T&nbsp;-SHIRT</span>
+          <ul class="basket__parametrs">
+            <li class="basket__list">Price: <span class="pinkText">$300</span></li>
+            <li class="basket__list">Color: Red</li>
+            <li class="basket__list">Size: XL</li>
+            <li class="basket__list">
+              Quantity: <input type="text" value="2" class="basket__quantity" />
+            </li>
+          </ul>
+        </div>
+        <span class="basket__close">&times;</span>
+      </div>
+    </div>
+    <div class="basket__left-btn">
+      <button class="btn btn__cart-btn">Clear shopping cart</button>
+      <button class="btn btn__cart-btn">Continue shopping</button>
+    </div>
+    <div class="basket__right"></div>
+  </div>
+</div>
+
+@@include('parts/footer.html')

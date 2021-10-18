@@ -1,0 +1,30 @@
+.chooseSize {
+  width: 79px;
+  height: 103px;
+  background-color: white;
+  position: absolute;
+  z-index: 9999;
+  top: 25px;
+  right: 25%;
+  padding-top: 13px;
+  padding-left: 9px;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+  &__input {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    position: relative;
+  }
+
+  &__input:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    position: absolute;
+    left: 20px;
+    top: -3px;
+    color: $darkGreyText;
+  }
+}
